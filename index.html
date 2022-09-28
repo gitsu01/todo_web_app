@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List by Subir</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="/">
+            <h1>To_Do_list</h1>
+        </a>
+    </header>
+
+    <main>
+        <div class="container">
+            <form onsubmit="return false;" class="input_form" id="todo_form">
+                <input type="text" name="todo_input_text" id="todo_input_text" placeholder="Enter new To-Do">
+                <button id="todo_add_btn" onclick="addTodos()">ADD</button>
+            </form>
+            <div id="output_div">
+                <h1 class="fixed">Output</h1>
+
+                <div class="item_div">
+                    This is a todo
+                    <button class="del_btn">X</button>
+                </div>
+                <div class="item_div">
+                    This is a todo 
+                    <div class="item_div_btn">
+                        <button class="edit_btn">Edit</button>
+                        <button class="del_btn">X</button>
+                    </div>
+                </div>
+            </div>
+            <div class="delete_btn_div">
+                <button id="all_delete_btn" onclick="deleteAllTodo()">Delete All ToDo</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

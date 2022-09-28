@@ -1,0 +1,162 @@
+
+:root{
+    --red: #EB1D36;
+    --green: #1FAB89;
+    --white: #fff;
+    --white_gray: #eee;
+    --dark_blue: #010101;
+    --box_shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--dark_blue);
+}
+a{
+    text-decoration: none;    
+}
+body{
+    background-color: var(--white_gray);
+    overflow: none;
+}
+
+header{
+    width: 100vw;
+    height: 60px;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    box-shadow: var(--box_shadow);
+}
+header a h1{
+    font-weight: 200;
+    text-transform: uppercase;
+    font-size: 24px;
+    text-shadow: var(--box_shadow);
+}
+
+
+main{
+    height: calc(100vh - 60px);
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.container > *{
+    width: 90vw;
+    max-width: 400px;
+    /* background-color: #EB1D36; */
+    margin-bottom: 1rem;
+}
+
+#todo_form{
+    display: flex;
+    justify-content: space-between;
+}
+
+#todo_form > *{
+    height: 40px;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--green);
+    border: 1px solid var(--green);
+    outline: none;
+    box-shadow: var(--box_shadow);
+}
+
+#todo_input_text{
+    width: 80%;
+    padding-left: 10px;
+}
+#todo_input_text::placeholder{
+    font-size: 14px;
+    font-weight: 100;
+    color: var(--green);
+}
+
+#todo_add_btn{
+    width: 19%;
+    height: 40px;
+    background-color: var(--white);
+    cursor: pointer;
+}
+#todo_add_btn:hover{
+    background-color: var(--green);
+    color: var(--white);
+    transition: all ease-in-out .3s;
+}
+
+#output_div{
+    background-color: var(--white);
+    border: 1px solid var(--dark_blue);
+    box-shadow: var(--box_shadow);
+    height: 75%;
+    position: relative;
+    overflow-y: auto;
+}
+#output_div::-webkit-scrollbar{
+    width: 3px;
+}
+#output_div .fixed{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    color: var(--white_gray);
+    font-weight: 200;
+    font-size: 2rem;
+}
+
+#all_delete_btn{
+    width: 100%;
+    height: 40px;
+    border: 1px solid var(--red);
+    outline: none;
+    background-color: var(--white);
+    text-transform: uppercase;
+    color: var(--red);
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+#all_delete_btn:hover{
+    background-color: var(--red);
+    color: var(--white);
+    transition: all ease-in-out .3s;
+}
+
+.item_div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 7px 5px;
+    height: 35px;
+    padding-left: 7px;
+    border: 1px solid var(--dark_blue);
+    background-color: var(--white_gray);
+    z-index: 100;
+    box-shadow: var(--box_shadow);
+    
+}
+
+.item_div button{
+    background-color: var(--white);
+    width: 36px;
+    height: 35px;
+    cursor: pointer;
+    transition: all ease-in-out .3s;
+
+}
+
+.item_div button.del_btn{
+    border: 1px solid var(--red);
+}
+.item_div button.del_btn:hover{
+    background-color: var(--red);
+    color: var(--white);
+}
